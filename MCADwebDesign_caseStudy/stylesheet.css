@@ -1,0 +1,24 @@
+@font-face {
+  font-family: fa-brands-400;
+  src: url(/fonts/nimbus-roman-no9-l.regular.otf);
+
+  font-family: fa-solid-900;
+  src: url(/fonts/nimbus-roman-no9-l.bold.otf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+main {
+  margin: 0 auto;
+  width: 70%;
+}
