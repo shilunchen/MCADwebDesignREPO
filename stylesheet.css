@@ -22,3 +22,41 @@ main {
   margin: 0 auto;
   width: 70%;
 }
+
+.slider {
+  position: relative;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.sliderBTN_wrap {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgbox img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.sliderBTN {
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: #888;
+  padding: 20px 40px;
+  font-size: 20px;
+  color: #ddd;
+  cursor: pointer;
+  /* margin: 10px auto; */
+}
+
+.sliderBTN:hover {
+  background: #111;
+}
