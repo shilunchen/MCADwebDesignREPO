@@ -20,7 +20,35 @@ img {
 
 main {
   margin: 0 auto;
-  width: 70%;
+  width: 50%;
+}
+
+.component {
+  outline: solid 5px pink;
+  outline-offset: 10px;
+}
+
+.hiddenNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hiddenNav_closeBTN {
+  display: block;
+  min-width: 100%;
+  text-align: right;
+  flex-wrap: wrap;
+}
+
+.hiddenNav_linksMedia {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hiddenNav_links {
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider {
