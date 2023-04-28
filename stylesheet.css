@@ -86,7 +86,7 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
-  background-image: url(/media/navBT.png);
+  background-image: url(media/navBT.png);
   transition: all 0.4s cubic-bezier(0.7, 2.56, 0.63, 0.25) 0s;
 }
 
