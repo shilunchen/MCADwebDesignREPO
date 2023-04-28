@@ -4,6 +4,22 @@
 
   font-family: fa-solid-900;
   src: url(/fonts/nimbus-roman-no9-l.bold.otf);
+
+  font-family: font-unknown1;
+  src: url(/fonts/con=fp_ddf10f3d28a90394e0e0496c707b2489&cha=UTF-8&dmode=&aa=1&ab=2&l=aHR0cHMlM0ElMkYlMkZ3d3cuaGFsbGFiLmNvLmpwJTJGZW5nJTJG&chws=&fa=Rk9ULeODi-ODpeODvOODreODgOODsyBQcm8gQg&lst=0&lsc=0&s=QUVKTlBTVmVpbW9ydw&ivs=0);
+
+  font-family: font-unknown2;
+  src: url(/fonts/con=fp_ddf10f3d28a90394e0e0496c707b2489&cha=UTF-8&dmode=&aa=1&ab=2&l=aHR0cHMlM0ElMkYlMkZ3d3cuaGFsbGFiLmNvLmpwJTJGZW5nJTJG&chws=&fa=Rk9ULeODi-ODpeODvOODreODgOODsyBQcm8gRUI&lst=0&lsc=0&s=QUNFSUtNTk9QUlNUVldZ&ivs=0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -14,8 +30,7 @@ img {
 .topNav_navBar {
   display: flex;
   justify-content: space-around;
-  width: 100vw;
-  height: 10vh;
+  padding: 26px;
 }
 
 .topNav_navBar_logo {
@@ -31,28 +46,195 @@ img {
 
 .topNav_navBar_BTNs {
   display: flex;
+  justify-content: space-around;
   justify-content: center;
 }
 
+.topNav_Navbar_langBTN {
+  margin: auto 0;
+  width: 150px;
+  border: 5px #1e2f4a solid;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 0.6em 0.4em;
+  text-align: center;
+  margin-right: 15px;
+  font-family: font-unknown1, sans-serif;
+  font-weight: 700;
+}
+
 .topNav_Navbar_eggBTN {
+  display: flex;
+  flex-direction: column;
+  width: 54px;
+  cursor: pointer;
+  border: none;
+
+  align-items: center;
+  justify-items: center;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: white;
   background-image: url(/media/navBT.png);
-
   transition: all 0.4s cubic-bezier(0.7, 2.56, 0.63, 0.25) 0s;
 }
 
-.topNav_Navbar_eggBTN_bars {
-  position: relative;
-  z-index: 10;
-  height: 27px;
-  width: 49%;
+.topNav_Navbar_eggBTN:hover {
+  transform: rotate(30deg);
 }
 
-span {
+.topNav_Navbar_eggBTN_bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: auto;
+}
+
+.topNav_Navbar_eggBTN_bars span {
+  padding: 0;
   transition: all 0.3s ease 0s;
+  width: 25px;
   display: block;
   height: 5px;
   background-color: #fff;
+}
+
+.hiddenNav {
+  position: fixed;
+  margin: 0;
+  padding: 120px 20px 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  background-color: #1f304c;
+  max-height: 100vh;
+}
+
+.hiddenNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hiddenNav_closeBTN {
+  position: absolute;
+  top: 2rem;
+  z-index: 10;
+  right: 2rem;
+  padding: 28px 14px 28px 18px;
+  cursor: pointer;
+}
+
+.hiddenNav_closeBTN > span {
+  display: block;
+  background-color: #fff;
+  width: 26px;
+  height: 4px;
+}
+
+.hiddenNav_closeBTN > span:first-child {
+  transform: rotate(45deg) translateY(3px);
+}
+
+.hiddenNav_closeBTN > span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-3px);
+}
+
+.hiddenNav_contentWrap {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0;
+  width: 1024px;
+}
+
+.hiddenNav_left {
+  font-family: font-unknown1, sans-serif;
+  font-weight: 1;
+  width: 840px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  border-right: solid 1px white;
+}
+
+.hiddenNav_left_links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hiddenNav_left_items {
+  font-size: 20px;
+  /* flex-basis: 25%; */
+  margin-right: 25px;
+  margin-bottom: 45px;
+  padding: 10px 10px 10px 0;
+  border-bottom: solid 1px white;
+  width: calc((99.99% - 120px) / 3);
+}
+
+.hiddenNav_right {
+  width: 164px;
+}
+
+.hiddenNav_left_policy {
+  display: block;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+
+.hiddenNav_left_policy li {
+  list-style-type: none;
+  color: white;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+/* --- breakline --- */
+
+.slider {
+  position: relative;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.sliderBTN_wrap {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgbox img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.sliderBTN {
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: #888;
+  padding: 20px 40px;
+  font-size: 20px;
+  color: #ddd;
+  cursor: pointer;
+  /* margin: 10px auto; */
+}
+
+.sliderBTN:hover {
+  background: #111;
 }
