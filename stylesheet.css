@@ -25,12 +25,16 @@ body {
 body {
   background-image: url(media/bg.png);
   background-position: top -40px center;
-  background-repeat: no-repeat;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+h1 {
+  display: block;
+  font-family: font-unknown1, sans-serif;
 }
 
 .topNav_navBar {
@@ -446,13 +450,23 @@ img {
 .secondary_arrow_prev {
   transform: rotate(-90deg);
   left: 230px;
-  top: 55%;
+  top: 40%;
+  transition: all ease-in-out 0.3s;
 }
 
 .secondary_arrow_next {
   transform: rotate(90deg);
   right: 230px;
-  top: 55%;
+  top: 40%;
+  transition: all ease-in-out 0.3s;
+}
+
+.secondary_arrow_prev:hover {
+  transform: rotate(-90deg) translateY(20px);
+}
+
+.secondary_arrow_next:hover {
+  transform: rotate(90deg) translateY(20px);
 }
 
 .BTN--blue--works {
@@ -464,6 +478,102 @@ img {
   font-size: 22px;
   font-weight: 400;
   transform: scale(1, 0.9);
+}
+
+.main_title {
+  margin: 90px auto 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  color: #1e2f4a;
+}
+
+.main_title img {
+  object-fit: cover;
+  width: 40px;
+  margin: 0 20px;
+}
+
+.main_content_headline {
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+  text-align: start;
+  margin-bottom: 40px;
+  border-bottom: solid 2px #1e2f4a;
+  border-left: solid 10px #1e2f4a;
+}
+
+.main_content h2 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.main_content h2 a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: fa-solid-900, sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  text-indent: 0;
+}
+
+.main_content p {
+  font-size: 14px;
+  line-height: 28px;
+  height: 100px;
+  font-family: fa-brands-400, sans-serif;
+  font-weight: 100;
+  color: black;
+}
+
+.main_content a {
+  display: block;
+  place-self: end;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: font-unknown1, sans-serif;
+  font-weight: 700;
+  transform: scale(1, 0.9);
+  color: #1e2f4a;
+}
+
+.main_contentWrap {
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 40px);
+  justify-content: start;
+}
+
+.main_content img {
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.main_contentWrap > .main_content:first-child > img {
+  mask: url(media/creative1-mask.png);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.main_contentWrap > .main_content:nth-child(2) > img {
+  mask: url(media/creative2-mask.png);
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 @media screen and (max-width: 504px) and (orientation: portrait) {
